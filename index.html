@@ -2,18 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Cecropia's The Hall VR in A-Frame</title>
+    <title>Mark Hall's Desktop App based on Cecropia's The Hall VR in A-Frame</title>
 
 
-    <meta property="og:title" content="Cecropia's The Hall VR in A-Frame" />
+    <meta property="og:title" content="BioFlight VR Fellowship Splash Page" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cecropia.github.io/thehallaframe/" />
     <meta property="og:image" content="https://cecropia.github.io/thehallaframe/screenshots/thehall1.jpg" />
-    <meta property="og:description" content="WebVR demo that displays art " />
+    <meta property="og:description" content="WebVR demo that displays information on the BioFlightVR Fellowship " />
 
     <meta name="twitter:card" content="summary_large_image">
 
-    <meta name="twitter:title" content="Cecropia's The Hall VR in A-Frame">
+    <meta name="twitter:title" content="BioFlight VR Fellowship Splash Page">
     <meta name="twitter:description" content="WebVR demo that displays art ">
     <meta name="twitter:image" content="https://cecropia.github.io/thehallaframe/screenshots/thehall1.jpg">
 
@@ -22,7 +22,7 @@
 
     <link rel="icon" href="favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
-    <meta name="description" content="Cecropia's The Hall VR in A-Frame">
+    <meta name="description" content="BioFlight VR Fellowship Splash Page">
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
@@ -48,12 +48,12 @@
 
     <div id="container" class="container">
       <div class="info">
-        <div class="company"><a href="http://www.cecropiasolutions.com" target="_blank">cecropiasolutions.com</a></div>
-        <div class="title">The Hall</div>
-        <div class="logo"><a href="http://www.cecropiasolutions.com" target="_blank"><img src="img/cec_logo.png"></a></div>
+        <div class="company"><a href="http://www.immersus.co/" target="_blank">BioFlightVR.com</a></div>
+        <div class="title">Trauma Room</div>
+        <div class="logo"><a href="http://www.immersus.co/" target="_blank"><img src="img/BioFlightVR_logo.png"></a></div>
         <a class="button" id="start_experience" href="#">start experience</a>
         <div class="instructions">
-          <div><strong>VR</strong>: Hand controllers and teleport with trigger.</div>
+          <div><strong>VR headset</strong>: Hand controllers and teleport with trigger.</div>
           <div><strong>Desktop</strong>: Keyboard (WASD/arrows) and mouse.</div>
           <div><strong>Mobile</strong>: Gaze cursor and teleportation.</div>
         </div>
@@ -207,32 +207,12 @@
         <a-asset-item id="monk_uv-ctm" src="models/monk_uv.ctm"></a-asset-item>
         <!--<img id="monk_uv-texture" src="textures/monk_uv.jpg">-->
         <!-- - monk_uv -->
-
+        <a-asset-item id="catheter" src="models/SuctionCatheter_straight.obj"></a-asset-item>
         <!-- david_bike_hall_3 -->
         <!--<a-asset-item id="david_bike_hall_3-obj" src="models/david_bike_hall_3.obj"></a-asset-item>-->
         <a-asset-item id="david_bike_hall_3-ctm" src="models/david_bike_hall_3.ctm"></a-asset-item>
         <!--<img id="david_bike_hall_3-texture" src="textures/david_bike_hall_3.jpg">-->
         <!-- - david_bike_hall_3 -->
-
-
-        <!-- mocaps -->
-        <a-asset-item id="am_threejs_CEC_BODY_1_HEAD-mocap" src="js/mocap/am_threejs_CEC_BODY_1_HEAD.js"></a-asset-item>
-        <a-asset-item id="am_threejs_CEC_BODY_1_LEFT-mocap" src="js/mocap/am_threejs_CEC_BODY_1_LEFT.js"></a-asset-item>
-        <a-asset-item id="am_threejs_CEC_BODY_1_RIGHT-mocap" src="js/mocap/am_threejs_CEC_BODY_1_RIGHT.js"></a-asset-item>
-
-        <a-asset-item id="am_threejs_CEC_BODY_2_HEAD-mocap" src="js/mocap/am_threejs_CEC_BODY_2_HEAD.js"></a-asset-item>
-        <a-asset-item id="am_threejs_CEC_BODY_2_LEFT-mocap" src="js/mocap/am_threejs_CEC_BODY_2_LEFT.js"></a-asset-item>
-        <a-asset-item id="am_threejs_CEC_BODY_2_RIGHT-mocap" src="js/mocap/am_threejs_CEC_BODY_2_RIGHT.js"></a-asset-item>
-
-        <a-asset-item id="am_threejs_CEC_BODY_3_HEAD-mocap" src="js/mocap/am_threejs_CEC_BODY_3_HEAD.js"></a-asset-item>
-        <a-asset-item id="am_threejs_CEC_BODY_3_LEFT-mocap" src="js/mocap/am_threejs_CEC_BODY_3_LEFT.js"></a-asset-item>
-        <a-asset-item id="am_threejs_CEC_BODY_3_RIGHT-mocap" src="js/mocap/am_threejs_CEC_BODY_3_RIGHT.js"></a-asset-item>
-
-        <a-asset-item id="am_threejs_CEC_BODY_4_HEAD-mocap" src="js/mocap/am_threejs_CEC_BODY_4_HEAD.js"></a-asset-item>
-        <a-asset-item id="am_threejs_CEC_BODY_4_LEFT-mocap" src="js/mocap/am_threejs_CEC_BODY_4_LEFT.js"></a-asset-item>
-        <a-asset-item id="am_threejs_CEC_BODY_4_RIGHT-mocap" src="js/mocap/am_threejs_CEC_BODY_4_RIGHT.js"></a-asset-item>
-        <!-- - mocaps -->
-
       </a-assets>
 
       <a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>
@@ -246,6 +226,7 @@
       <a-entity obj-model="obj: #moonlight-obj;" material="src: #moonlight-texture"></a-entity>
       <a-entity obj-model="obj: #podiums-obj;" material="src: #podiums-texture"></a-entity>
       <a-entity obj-model="obj: #lamps-obj;" material="src: #lamps-texture; side: double;"></a-entity>
+      <a-entity obj-model="obj: #catheter"></a-entity>
 
       <!--<a-entity obj-model="obj: #david-obj;" material="src: #david-texture"></a-entity>-->
       <a-entity ctm="src: #david-ctm; name:david;"></a-entity>
@@ -283,41 +264,7 @@
       <!--<a-entity obj-model="obj: #david_bike_hall_3-obj;" material="src: #david_bike_hall_3-texture"></a-entity>-->
       <a-entity ctm="src: #david_bike_hall_3-ctm; name:david_bike_hall_3;"></a-entity>
 
-      <a-entity mocap="head: #am_threejs_CEC_BODY_1_HEAD-mocap;
-                       left: #am_threejs_CEC_BODY_1_LEFT-mocap;
-                       right: #am_threejs_CEC_BODY_1_RIGHT-mocap;
-                       totalFrames:645;
-                       torsoPosition: 0 -0.4 0.05"
-                position=" -3 1 6.5"
-                rotation="0 -90 0">
-      </a-entity>
 
-      <a-entity mocap="head: #am_threejs_CEC_BODY_2_HEAD-mocap;
-                       left: #am_threejs_CEC_BODY_2_LEFT-mocap;
-                       right: #am_threejs_CEC_BODY_2_RIGHT-mocap;
-                       totalFrames:626;
-                       torsoPosition: 0.0 -0.4 0.05"
-                position=" -3 1 9.2"
-                rotation="0 -90 0">
-      </a-entity>
-
-      <a-entity mocap="head: #am_threejs_CEC_BODY_3_HEAD-mocap;
-                       left: #am_threejs_CEC_BODY_3_LEFT-mocap;
-                       right: #am_threejs_CEC_BODY_3_RIGHT-mocap;
-                       totalFrames:600;
-                       torsoPosition: 0 -0.4 0.05"
-                position=" -3 1 12.2"
-                rotation="0 -90 0">
-      </a-entity>
-
-      <a-entity mocap="head: #am_threejs_CEC_BODY_4_HEAD-mocap;
-                       left: #am_threejs_CEC_BODY_4_LEFT-mocap;
-                       right: #am_threejs_CEC_BODY_4_RIGHT-mocap;
-                       totalFrames:7050;
-                       torsoPosition: -0.05 -0.4 0.0";
-                position=" -3 1 4"
-                rotation="0 0 0">
-      </a-entity>
 
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="left"></a-entity>
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="right"></a-entity>
