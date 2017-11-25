@@ -208,6 +208,9 @@
         <!--<img id="monk_uv-texture" src="textures/monk_uv.jpg">-->
         <!-- - monk_uv -->
         <a-asset-item id="catheter" src="models/SuctionCatheter_straight.obj"></a-asset-item>
+        <!-- Trauma Room -->
+        <a-asset-item id="TraumaRoom-obj" src="models/TraumaRoom.obj"></a-asset-item>
+        <!-- - Trauma Room -->
         <!-- david_bike_hall_3 -->
         <!--<a-asset-item id="david_bike_hall_3-obj" src="models/david_bike_hall_3.obj"></a-asset-item>-->
         <a-asset-item id="david_bike_hall_3-ctm" src="models/david_bike_hall_3.ctm"></a-asset-item>
@@ -215,9 +218,11 @@
         <!-- - david_bike_hall_3 -->
       </a-assets>
 
+
       <a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>
 
-      <a-entity obj-model="obj: #floor-obj;" material="src: #floor-texture; normalMap: #floor_normal-texture; metalness: 0.6" id="floor"></a-entity>
+      <a-entity obj-model=:"obj; #TraumaRoom-obj"></a-entity>
+      <!--<a-entity obj-model="obj: #floor-obj;" material="src: #floor-texture; normalMap: #floor_normal-texture; metalness: 0.6" id="floor"></a-entity>
       <a-entity obj-model="obj: #hall-obj;" material="src: #hall-texture" id="hall"></a-entity>
       <a-entity obj-model="obj: #hall_low_floor-obj;" material="opacity: 0.0" id="hall_low_floor"></a-entity>
       <a-entity obj-model="obj: #acropolis-obj;" material="src: #acropolis-texture"></a-entity>
@@ -225,7 +230,7 @@
       <a-entity obj-model="obj: #good_samaritan-obj;" material="src: #good_samaritan-texture"></a-entity>
       <a-entity obj-model="obj: #moonlight-obj;" material="src: #moonlight-texture"></a-entity>
       <a-entity obj-model="obj: #podiums-obj;" material="src: #podiums-texture"></a-entity>
-      <a-entity obj-model="obj: #lamps-obj;" material="src: #lamps-texture; side: double;"></a-entity>
+      <a-entity obj-model="obj: #lamps-obj;" material="src: #lamps-texture; side: double;"></a-entity>-->
       <a-entity obj-model="obj: #catheter"></a-entity>
 
       <!--<a-entity obj-model="obj: #david-obj;" material="src: #david-texture"></a-entity>-->

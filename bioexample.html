@@ -1,0 +1,91 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="utf-8" />
+    <title>Trauma Room Tour</title>
+    <meta name="description" content="360° Image Gallery - A-Frame" />
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+	<script src="https://unpkg.com/aframe-look-at-component@0.5.1/dist/aframe-look-at-component.min.js"></script>
+    <script src="components/set-image.js"></script>
+  </head>
+  <body class="a-body ">
+    <a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="300" height="150"></canvas>
+      <a-assets>
+        <img id="start" crossorigin="anonymous" src="images/trauma-room-start.jpg">
+        <img id="start-thumb" crossorigin="anonymous" src="images/view-marker.jpg">
+        <img id="back-cart-thumb" crossorigin="anonymous" src="images/view-marker.jpg">
+        <img id="side-cart-thumb" crossorigin="anonymous" src="images/view-marker.jpg" "="">
+        <audio id="click-sound" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+        <img id="back-cart" crossorigin="anonymous" src="images/trauma-room-back-cart.jpg">
+        <img id="side-cart" crossorigin="anonymous" src="images/trauma-room-iv.jpg">
+
+        <!-- Image link template to be reused. -->
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: ${thumb}"
+            event-set__1="_event: mousedown; scale: 1 1 1"
+            event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+            event-set__3="_event: mouseenter; scale: 1.2 1.2 1"
+            event-set__4="_event: mouseleave; scale: 1 1 1"
+			event-set__5="_event: click; _target: #back-cart-link; position: 0 100 0"
+			event-set__6="_event: click; _target: #start-link; position: 6 -1 2"
+			event-set__7="_event: click; _target: #side-cart-link; position: 4 -1 6"
+            set-image="on: click; target: #image-360; src: ${src}"
+            sound="on: click; src: #click-sound"></a-entity>
+        </script>
+
+		<script id="link2" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: ${thumb}"
+            event-set__1="_event: mousedown; scale: 1 1 1"
+            event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+            event-set__3="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__4="_event: mouseleave; scale: 1 1 1"
+			event-set__6="_event: click; _target: #start-link; position: 0 100 0"
+			event-set__5="_event: click; _target: #back-cart-link; position: -6 -1 -2"
+			event-set__7="_event: click; _target: #side-cart-link; position: -3 -1 4"
+            set-image="on: click; target: #image-360; src: ${src}"
+            sound="on: click; src: #click-sound"></a-entity>
+        </script>
+
+		<script id="link3" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: ${thumb}"
+            event-set__1="_event: mousedown; scale: 1 1 1"
+            event-set__2="_event: mouseup; scale: 1.2 1.2 1"
+            event-set__3="_event: mouseenter; scale: 1.2 1.2 1.2"
+            event-set__4="_event: mouseleave; scale: 1 1 1"
+			event-set__6="_event: click; _target: #start-link; position: 1 -1 -4"
+			event-set__5="_event: click; _target: #back-cart-link; position: -5 -1 -5"
+			event-set__7="_event: click; _target: #side-cart-link; position: 0 100 0"
+            set-image="on: click; target: #image-360; src: ${src}"
+            sound="on: click; src: #click-sound"></a-entity>
+        </script>
+
+      </a-assets>
+
+      <!-- 360-degree image. -->
+      <a-sky id="image-360" radius="10" src="#start" material="" geometry="" data-set-image-fade-setup="true" animation__fade="property:material.color;startEvents:set-image-fade;dir:alternate;dur:300;from:#FFF;to:#000"></a-sky>
+
+      <!-- Image links. -->
+      <a-entity>
+        <a-entity id="back-cart-link" template="src:#link" data-src="#back-cart" data-thumb="#back-cart-thumb" position="-6 -1 -2" look-at="[camera]"><a-entity class="link" geometry="primitive:plane" material="shader:flat;src:[object HTMLImageElement]" event-set__1="[object Object]" event-set__2="[object Object]" event-set__3="[object Object]" event-set__4="[object Object]" event-set__5="[object Object]" event-set__6="[object Object]" event-set__7="[object Object]" set-image="on:click;target:#image-360;src:#back-cart" sound="on:click;src:https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></a-entity></a-entity>
+        <a-entity id="start-link" template="src:#link2" data-src="#start" data-thumb="#start-thumb" position="0 100 0" look-at="[camera]"><a-entity class="link" geometry="primitive:plane" material="shader:flat;src:[object HTMLImageElement]" event-set__1="[object Object]" event-set__2="[object Object]" event-set__3="[object Object]" event-set__4="[object Object]" event-set__6="[object Object]" event-set__5="[object Object]" event-set__7="[object Object]" set-image="on:click;target:#image-360;src:#start" sound="on:click;src:https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></a-entity></a-entity>
+        <a-entity id="side-cart-link" template="src:#link3" data-src="#side-cart" data-thumb="#side-cart-thumb" position="-3 -1 4" look-at="[camera]"><a-entity class="link" geometry="primitive:plane" material="shader:flat;src:[object HTMLImageElement]" event-set__1="[object Object]" event-set__2="[object Object]" event-set__3="[object Object]" event-set__4="[object Object]" event-set__6="[object Object]" event-set__5="[object Object]" event-set__7="[object Object]" set-image="on:click;target:#image-360;src:#side-cart" sound="on:click;src:https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></a-entity></a-entity>
+      </a-entity>
+
+      <!-- Camera + cursor. -->
+      <a-entity id="camera" camera="" rotation="-19.480565034448002 110.39729750665734 0" wasd-controls="" look-controls="" data-aframe-inspector-original-camera="">
+        <a-cursor id="cursor" animation__click="property:scale;startEvents:click;from:0.1 0.1 0.1;to:1 1 1;dur:150" animation__fusing="property:fusing;startEvents:fusing;from:1 1 1;to:0.1 0.1 0.1;dur:1500" event-set__1="[object Object]" event-set__2="[object Object]" fuse="true" raycaster="objects:.link" material="" cursor="" geometry="" color="black" fusing="0.09999999999999998 0.09999999999999998 0.09999999999999998 ">
+		  <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" fill="backwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+		  </a-cursor>
+
+      </a-entity>
+    </a-scene>
+
+</body></html>
