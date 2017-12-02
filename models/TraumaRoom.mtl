@@ -1,0 +1,636 @@
+newmtl Adenosine_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Airway_Cart_painted_v001SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Albuterol_previz_v01SG
+illum 4
+Kd 0.30 0.62 0.51
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Ambu_Bag_previz_v01SG
+illum 4
+Kd 0.09 0.16 0.59
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Angiocatheter_previz_v01_FBXASC0401FBXASC041SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Angiocatheter_previz_v01_FBXASC0401FBXASC041SG1
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Angiocatheter_previz_v01_FBXASC0401FBXASC041SG2
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Angiocatheter_previz_v01_SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Angiocatheter_previz_v01_SG1
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Angiocatheter_previz_v01_SG2
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Ativan_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Atropine_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl BloodSample_Kit_previz_v01SG
+illum 4
+Kd 0.06 0.30 0.10
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl BloodSample_Kit_previz_v01SG1
+illum 4
+Kd 0.40 0.22 0.53
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl BloodSample_Kit_previz_v01SG2
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Cabinets_painted_v001SG
+illum 4
+Kd 0.49 0.59 0.67
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Ceftriaxone_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Ceiling_painted_v002SG
+illum 4
+Kd 0.71 0.71 0.71
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Cricothyrotomy_Kit_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Curtain_painted_v001SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Dexamethasone_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Dilantin_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Diphenhydramine_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Doors1_painted_v003SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Doors2_painted_v003SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl DopamineIV_1SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Endotracheal_Tube_Stylet_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Endotracheal_Tube_Stylet_previz_v01SG1
+illum 4
+Kd 0.11 0.20 0.24
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl EpinephrinDrip_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Epinephrine_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl EquipmentBoom_painted_v001SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Face_Mask_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Floor_painted_v003SG
+illum 4
+Kd 0.54 0.54 0.54
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl GIRL_Girl_hair_geoSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 18.00
+newmtl GIRL_girl_body_geoSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl GIRL_girl_body_geoSG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl GIRL_girl_body_geoSG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl GIRL_girl_l_eye_geoSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 18.00
+newmtl GenericIV_1SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl GenericPills_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl IV_Pole_painted_v001SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl InstrumentTray_painted_v001SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Keppra_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Laryngoscope_previz_v01SG
+illum 4
+Kd 0.27 0.32 0.31
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl LatexGloves_painted_v002SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Light_panel_v01SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl NRB_Mask_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Nasal_Cannula_previz_v001SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Nasopharyngeal_Airway_previz_v01SG
+illum 4
+Kd 0.31 0.17 0.13
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Nebulizer_Mask_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Patient_Monitor_Screen_v01SG
+illum 4
+Kd 0.05 0.05 0.05
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Patient_Monitor_painted_v001SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Prednisone_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Propranolol_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl RacemicEpinephrin_previz_v01SG
+illum 4
+Kd 0.64 0.37 0.37
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Ranitidine_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl SharpsContainer_painted_v001SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl SoluFBXASC045Medrol_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Stethoscope_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl StorageShelf_blockingSG
+illum 4
+Kd 0.53 0.53 0.46
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl Suction_Catheter_previz_v001SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl SupplyCart_painted_v001SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl SurgicalLamps_painted_v001SG
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl SurgicalLamps_painted_v001SG1
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Syringe3ml_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Syringe3ml_previz_v01SG1
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Syringe3ml_previz_v01SG2
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Syringe5ml_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Syringe5ml_previz_v01SG1
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Syringe5ml_previz_v01SG2
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Syringe10ml_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Syringe10ml_previz_v01SG1
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Syringe10ml_previz_v01SG2
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Syringe20ml_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl TransportStretcher_painted_v002SG1
+illum 4
+Kd 1.00 1.00 1.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Valium_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl Walls_painted_v004SG
+illum 4
+Kd 0.54 0.54 0.54
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 10.00
+newmtl Xanax_previz_v01SG
+illum 4
+Kd 0.58 0.58 0.58
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 4.00
+newmtl blanket_geoSG
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
