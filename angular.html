@@ -1,22 +1,173 @@
-<!-- Adding the ng-app declaration to initialize AngularJS -->
-<div id="main" ng-app>
-    <!-- The navigation menu will get the value of the "active" variable as a class.
-         The $event.preventDefault() stops the page from jumping when a link is clicked. -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="description" content="Trauma Room: Landing Page">
+        <meta charset="utf-8">
 
-    <nav class="{{active}}" ng-click="$event.preventDefault()">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-        <!-- When a link in the menu is clicked, we set the active variable -->
+        <!-- Facebook Share -->
+        <meta property="og:url" content="http://www.immersus.co/aframe-tests/trauma-room-tour/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Trauma Room: A WebVR Experiment" />
+        <meta property="og:description" content="bioflightVR bring the real model of a Trauma Room to webVR." />
+        <meta property="og:image" content="http://www.immersus.co/images/trauma-room-tour.jpg" />
 
-        <a href="#" class="home" ng-click="active='home'">Home</a>
-        <a href="#" class="projects" ng-click="active='projects'">Projects</a>
-        <a href="#" class="services" ng-click="active='services'">Services</a>
-        <a href="#" class="contact" ng-click="active='contact'">Contact</a>
-    </nav>
+        <!-- Twitter Share -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Trauma Room: A WebVR Experiment">
+        <meta name="twitter:description" content="bioflightVR bring the real model of a Trauma Room to webVR.">
+        <meta name="twitter:image" content="http://www.immersus.co/images/trauma-room-tour.jpg">
 
-    <!-- ng-show will show an element if the value in the quotes is truthful,
-         while ng-hide does the opposite. Because the active variable is not set
-         initially, this will cause the first paragraph to be visible. -->
+        <title>Access Mars: A WebVR Experiment</title>
+        <link rel="stylesheet" type="text/css" href="vr.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100" rel="stylesheet">
 
-    <p ng-hide="active">Please click a menu item</p>
-    <p ng-show="active">You chose <b>{{active}}</b></p>
-</div>
+		<!-- Origin Trial Token, feature = WebVR (For Chrome M59+), origin = https://accessmars.withgoogle.com, expires = 2017-11-14 -->
+		<meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M59+)" data-expires="2017-11-14" content="Apl/4s/riQR+1zxX3m0HhiLIyq29CQ/HbIuL9IPNLLjJ3BA4on7oGk3tVEoyes4vqcuNldcqSumKqLnu/JcZJw8AAABbeyJvcmlnaW4iOiJodHRwczovL2FjY2Vzc21hcnMud2l0aGdvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IldlYlZSMS4xIiwiZXhwaXJ5IjoxNTEwNjE3NjAwfQ==">
+
+        <!-- Origin Trial Token, feature = WebVR (For Chrome M62+), origin = https://accessmars.withgoogle.com, expires = 2018-01-10 -->
+        <meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M62+)" data-expires="2018-01-10" content="ApIKzSlD/9x77kXzmZzK8YgcHLrmkbtd2n5u9cWDf270jqCLPzbXad87AuuVR8XLTKs+dwH0hSPwXiQGWugtEwQAAABeeyJvcmlnaW4iOiJodHRwczovL2FjY2Vzc21hcnMud2l0aGdvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IldlYlZSMS4xTTYyIiwiZXhwaXJ5IjoxNTE1NjI3ODAyfQ==">
+
+        <script src="js/ga.js"></script>
+        <script src="js/fallback.js"></script>
+        <script src="js/splash.js"></script>
+		<script src="js/vr.js"></script>
+    </head>
+
+    <body>
+
+		<div class="splash">
+			<header>
+				<span class="headerImage">
+					<img class="headerPart" src="img/splash/title-access.png">
+					<img class="headerPart" src="img/splash/title-mars.png">
+				</span>
+				<h3 class="headers">
+					<span>The real surface of Mars. Recorded by</span>
+					<span>NASA's Curiosity rover. Now in your browser.</span>
+				</h3>
+				<div id="enter-vr-container" style="color: #ffffff">
+				<br>
+				<a id="try-it-in-360" style="display: none;" href="javascript:void(0);">try it in 360</a>
+			</div>
+			</header>
+		</div>
+
+		<div class="footer">
+			<div class="gradient left"></div>
+			<div class="gradient right"></div>
+			<a href="#" class="about-btn">About</a>
+			<div class="terms">
+				<a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">Privacy</a> &amp;&nbsp;<a href="https://www.google.com/intl/en/policies/terms/" target="_blank">Terms</a>
+			</div>
+			<ul class="credits">
+				<li><a href="https://webvrexperiments.com/" target="_blank"><img src="img/splash/webvr-experiment.png"></a></li>
+				<li><img src="img/splash/line.png"></li>
+				<li><img src="img/splash/google-friends.png"></li>
+				<li><img src="img/splash/line.png"></li>
+                <li><a href="https://mars.nasa.gov/" target="_blank"><img src="img/splash/nasa.png"></a></li>
+			</ul>
+            <div class="headphones">
+			    <img src="./img/headphones.svg">
+			<div id="headphones-text">Headphones Recommended</div>
+		</div>
+		</div>
+
+		<div class="about">
+			<article>
+				<div class="close"></div>
+
+				<div class="experimentHeader">
+					<h2>About<br>the<br>experiment</h2>
+					<div class="squiggleTint"></div>
+					<p class="custom-text-width">Access Mars lets you explore a 3D replica of the Martian surface, exactly as it was recorded by the Curiosity rover. As Curiosity has travelled across Mars, it’s taken digital photographs with two stereoscopic camera systems. By combining and analyzing these photographs, scientists at NASA JPL have created a 3D model used to study Mars and plan future experiments. For the first time, this same 3D model is now available here for anyone to explore in their browser using WebVR.</p>
+				</div>
+
+				<div class="terrain">
+					<h2>Mapping<br>the<br>terrain</h2>
+					<div class="clearfix">
+						<div class="column right content">
+							<h4>Step 01</h4>
+							<div class="squiggleGrey"></div>
+							<p>Image mosaics are captured with the left and right Navcam and Mastcam.</p>
+						</div>
+						<img class="column right image" src="img/splash/about/mapping_01.jpg">
+					</div>
+
+					<div class="clearfix"/>
+						<div class="column left content">
+							<h4>Step 02</h4>
+							<div class="squiggleGrey"></div>
+							<p>The two mosaics are then combined together to create a stereo match.</p>
+						</div>
+						<img class="column left image" src="img/splash/about/mapping_02.jpg">
+					</div>
+
+					<div class="clearfix">
+						<div class="column right content">
+							<h4>Step 03</h4>
+							<div class="squiggleGrey"></div>
+							<p>Using the data from the stereo match scientists are able to extract 3D mapping data.</p>
+						</div>
+						<img class="column right image" src="img/splash/about/mapping_03.jpg">
+					</div>
+
+					<div class="clearfix"/>
+						<div class="column left content">
+							<h4>Step 04</h4>
+							<div class="squiggleGrey"></div>
+							<p>Using metadata from the time, location, and direction the images were taken, scientists can tile the terrain data into a composite piece of terrain.</p>
+						</div>
+						<img class="column left image" src="img/splash/about/mapping_04.jpg">
+					</div>
+				</div>
+
+				<div class="aboutKatieHeader clearfix">
+					<div class="column left katie-content">
+						<h2>Introducing<br>Katie Stack<br>Morgan</h2>
+						<div class="squiggleTint"></div>
+						<p>As you explore the surface of Mars, you’ll learn about key points of interest from Katie Stack Morgan of NASA’s JPL. Since 2012, Katie has been working as a planetary geologist on the Mars Science Laboratory mission, analyzing Curiosity’s discoveries and planning future parts of the mission. Her primary focus is studying the geology of ancient Mars to learn what the planet may have been like in the past, and if it might have supported life.</p>
+					</div>
+					<img class="column left katie-image" src="img/splash/about/katie.jpg">
+				</div>
+
+				<div class="codeHeader">
+					<h2>Learn More</h2>
+					<div class="squiggleTint"></div>
+					<p class="custom-text-width-code">
+						Take a look at the code on <a href="http://github.com/googlecreativelab/access-mars" target="_blank">GitHub</a>.
+						Check out more <a href="https://webvrexperiments.com/" target="_blank">WebVR Experiments</a>.
+						Get the latest on Mars from <a href="https://mars.nasa.gov/" target="_blank">NASA</a>.
+					</p>
+				</div>
+
+			</article>
+		</div>
+
+        <ul class="scene-intro-labels">
+            <li data-site="landing_site">
+                01; Landing Site; Photographed by Curiosity; Aug 7, 2012 - Aug 26, 2012
+            </li>
+            <li data-site="pahrump_hills">
+                02; Pahrump Hills; Photographed by Curiosity; Feb 17, 2015 - Mar 11, 2015
+            </li>
+            <li data-site="marias_pass">
+                03; Marias Pass; Photographed by Curiosity; May 22, 2015 - Aug 6, 2015
+            </li>
+			<li data-site="murray_buttes">
+                04; Murray Buttes; Photographed by Curiosity; Sep 1, 2016 - Sep 4, 2016
+            </li>
+			<li data-site="live_site">
+                05; Current Location; Photographed by Curiosity; October 3rd, 2017
+            </li>
+        </ul>
+
+        <video id="intro-video-webm" src="intro/intro.webm" playsinline style="display:block; z-index: 0; position:absolute;"></video>
+        <video id="intro-video-mp4" src="intro/intro.mp4" playsinline style="display:block; z-index: 0; position:absolute;"></video>
+
+        <div id="skip-intro">SKIP INTRO</div>
