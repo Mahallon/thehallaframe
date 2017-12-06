@@ -14,12 +14,29 @@ body{
   right: 0;
   top: 0;
   overflow: hidden;
-  height: 600px;
+  height:100%;
   background-color: #050A0E;
   background-repeat: no-repeat;
-  background-image: url("img/Headset_header.jpg");
+  background-image: url("img/Headset_backdround.png");
   background-position: center;
   background-size: cover;
+}
+
+#enterTheMatrix{
+  background-color:  #f0f2f4;
+  border: #f0f2f4;
+  color: #0D111C;
+  border-color: #f0f2f4;
+  text-align: center;
+  padding: 15px 32px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#startButton{
+  position: relative;
+  bottom: 0px;
+  left: 0px;
 }
 
 #header_wrapper{
@@ -28,8 +45,34 @@ body{
 
 .inner {
   color: white;
-  width: 80%;
+  width: 90%;
   margin: auto;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.nav li a:hover{
+  background-color: #0C1018;
+}
+
+#splash_wraper{
+  /*display: none;*/
 }
 
 #main {

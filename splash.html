@@ -7,18 +7,307 @@
 
     <link rel="stylesheet" type="text/css" href="my.css">
 
+    <script src="js/aframe.0.7.0.min.js"></script>
+    <script src="js/aframe-extras.min.js"></script>
+
+    <script src="js/lzma.js"></script>
+    <script src="js/ctm.js"></script>
+    <script src="js/CTMLoader.js"></script>
+
+    <script src="js/aframe-teleport-controls.min.js"></script>
+    <script src="js/spheres_anim.js"></script>
+    <script src="js/anim_1.js"></script>
+    <script src="js/anim_2.js"></script>
+    <script src="js/mocap.js"></script>
+    <script src="js/envMapMaterial.js"></script>
+    <script src="js/ctm_component.js"></script>
+    <script src="js/mobile_component.js"></script>
+
   </head>
 
   <body>
-    <div id="header_wrapper">
-      <div id="header">
-        <div class="inner">
-          <p> this is the header</p>
+    <div id="splash_wraper">
+      <div id="header_wrapper">
+        <div id="header">
+          <div class="inner">
+            <ul class="nav">
+              <li><a href="splash.html">Home</a></li>
+              <li><a href="splash.html">Contact</a></li>
+              <li><a href="https://experiments.withgoogle.com/webvr">WebVR</a></li>
+              <li style="float:right"><a href="splash.html">About</a></li>
+            </ul>
+            <div class="startButton">
+              <button id="enterTheMatrix" onclick="start()">Enter 360</button>
+              <div class="instructions">
+                <div><strong>Desktop</strong>: Keyboard (WASD/arrows) and mouse.</div>
+                <div><strong>VR headset</strong>: Hand controllers and teleport with trigger.</div>
+                <div><strong>Mobile</strong>: Gaze cursor and teleportation.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer">
+        <ul class="nav">
+          <li><a href="splash.html">Home</a></li>
+          <li><a href="splash.html">About</a></li>
+          <li><a href="splash.html">Contact</a></li>
+          <li><a href="https://experiments.withgoogle.com/webvr">WebVR</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <a-scene id="traumaRoom-ascene" style="display:none">
+
+      <a-entity mobile></a-entity>
+
+      <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="2 20 0"></a-entity>
+      <a-entity light="type: ambient; color: #FFF"></a-entity>
+
+      <a-assets>
+        <a-mixin id="checkpoint"></a-mixin>
+        <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
+
+
+        <img id="sky_sphere-texture" src="textures/black_sky_sphere.jpg">
+
+        <a-sound src="audio/84529__cmusounddesign__02-museum.ogg"
+                 autoplay="true"
+                 loop="true"
+                 position="1 1 0"></a-sound>
+
+        <a-sound src="audio/219462__cediez__musee-victoria-londres-grand-escalier.ogg"
+                 autoplay="true"
+                 loop="true"
+                 position="1 1 10"></a-sound>
+
+
+        <!-- floor -->
+        <a-asset-item id="floor-obj" src="models/floor.obj"></a-asset-item>
+        <img id="floor-texture" src="textures/floor.jpg">
+        <img id="floor_normal-texture" src="textures/floor_normal.jpg">
+        <!-- - floor -->
+
+        <!-- hall -->
+        <a-asset-item id="hall-obj" src="models/hall.obj"></a-asset-item>
+        <img id="hall-texture" src="textures/hall.jpg">
+        <!--<img id="hall_normal-texture" src="textures/hall_normal.jpg">-->
+        <!-- - hall -->
+
+        <!-- hall low floor -->
+        <!-- this piece is only meant for teleportation -->
+        <a-asset-item id="hall_low_floor-obj" src="models/hall_low_floor.obj"></a-asset-item>
+        <!-- - hall low floor-->
+
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: ${thumb}"
+            sound="on: click; src: #click-sound"></a-entity>
+        </script>
+
+        <a-asset-item id="catheter" src="models/SuctionCatheter_straight.obj"></a-asset-item>
+        <!-- Trauma Room -->
+        <a-asset-item id="TraumaRoom-obj" src="models/TraumaRoom.obj"></a-asset-item>
+        <a-asset-item id="TraumaRoom-mtl" src="models/TraumaRoom.mtl"></a-asset-item>
+        <!-- - Trauma Room -->
+        <a-asset-item id="wolf-gtlf" src="models/wolf.gltf"></a-asset-item>
+
+      </a-assets>
+
+
+      <a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>
+
+      <a-gltf-model src="#wolf"></a-gltf-model>
+
+
+      <a-obj-model src="#TraumaRoom-obj" mtl="#TraumaRoom-mtl"
+                scale="0.01 0.01 0.01"></a-entity>
+      <!--<a-entity obj-model="obj: #floor-obj;" material="src: #floor-texture; normalMap: #floor_normal-texture; metalness: 0.6" id="floor"></a-entity>
+      <a-entity obj-model="obj: #hall-obj;" material="src: #hall-texture" id="hall"></a-entity>
+      <a-entity obj-model="obj: #hall_low_floor-obj;" material="opacity: 0.0" id="hall_low_floor"></a-entity>
+      <a-entity obj-model="obj: #acropolis-obj;" material="src: #acropolis-texture"></a-entity>
+      <a-entity obj-model="obj: #castle_lake-obj;" material="src: #castle_lake-texture"></a-entity>
+      <a-entity obj-model="obj: #good_samaritan-obj;" material="src: #good_samaritan-texture"></a-entity>
+      <a-entity obj-model="obj: #moonlight-obj;" material="src: #moonlight-texture"></a-entity>
+      <a-entity obj-model="obj: #podiums-obj;" material="src: #podiums-texture"></a-entity>
+      <a-entity obj-model="obj: #lamps-obj;" material="src: #lamps-texture; side: double;"></a-entity>-->
+      <a-entity obj-model="obj: #catheter"></a-entity>
+
+      <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="left"></a-entity>
+      <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="right"></a-entity>
+
+    </a-scene>
+
+  </body>
+</html>
+<script>
+function start() {
+    document.getElementById("splash_wraper").style.display = "none";
+    document.getElementById("traumaRoom-ascene").style.display = "block";
+}
+</script>
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mark Hall's Desktop App based on Cecropia's The Hall VR in A-Frame</title>
+
+
+    <meta property="og:title" content="BioFlight VR Fellowship Splash Page" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cecropia.github.io/thehallaframe/" />
+    <meta property="og:image" content="https://cecropia.github.io/thehallaframe/screenshots/thehall1.jpg" />
+    <meta property="og:description" content="WebVR demo that displays information on the BioFlightVR Fellowship " />
+
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title" content="BioFlight VR Fellowship Splash Page">
+    <meta name="twitter:description" content="WebVR demo that displays art ">
+    <meta name="twitter:image" content="https://cecropia.github.io/thehallaframe/screenshots/thehall1.jpg">
+
+
+
+
+    <link rel="icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+    <meta name="description" content="BioFlight VR Fellowship Splash Page">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="js/aframe.0.7.0.min.js"></script>
+    <script src="js/aframe-extras.min.js"></script>
+
+    <script src="js/lzma.js"></script>
+    <script src="js/ctm.js"></script>
+    <script src="js/CTMLoader.js"></script>
+
+    <script src="js/aframe-teleport-controls.min.js"></script>
+    <script src="js/spheres_anim.js"></script>
+    <script src="js/anim_1.js"></script>
+    <script src="js/anim_2.js"></script>
+    <script src="js/mocap.js"></script>
+    <script src="js/envMapMaterial.js"></script>
+    <script src="js/ctm_component.js"></script>
+    <script src="js/mobile_component.js"></script>
+
+  </head>
+
+  <body>
+
+    <div id="container" class="container">
+      <div class="info">
+        <div class="company"><a href="http://www.immersus.co/" target="_blank">BioFlightVR.com</a></div>
+        <div class="title">Trauma Room</div>
+        <div class="logo"><a href="http://www.immersus.co/" target="_blank"><img src="img/BioFlightVR_logo.png"></a></div>
+        <a class="button" id="start_experience" href="#">start experience</a>
+        <div class="instructions">
+          <div><strong>VR headset</strong>: Hand controllers and teleport with trigger.</div>
+          <div><strong>Desktop</strong>: Keyboard (WASD/arrows) and mouse.</div>
+          <div><strong>Mobile</strong>: Gaze cursor and teleportation.</div>
         </div>
       </div>
     </div>
-    <div id="main">
-      <p>main content goes here</p>
-    </div>
+
+    <!--<a-scene stats>
+
+    <a-scene>
+
+      <a-entity mobile></a-entity>
+
+      <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="2 20 0"></a-entity>
+      <a-entity light="type: ambient; color: #FFF"></a-entity>
+
+      <a-assets>
+        <a-mixin id="checkpoint"></a-mixin>
+        <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
+
+
+        <img id="sky_sphere-texture" src="textures/black_sky_sphere.jpg">
+
+        <a-sound src="audio/84529__cmusounddesign__02-museum.ogg"
+                 autoplay="true"
+                 loop="true"
+                 position="1 1 0"></a-sound>
+
+        <a-sound src="audio/219462__cediez__musee-victoria-londres-grand-escalier.ogg"
+                 autoplay="true"
+                 loop="true"
+                 position="1 1 10"></a-sound>
+
+
+        <!-- floor
+        <a-asset-item id="floor-obj" src="models/floor.obj"></a-asset-item>
+        <img id="floor-texture" src="textures/floor.jpg">
+        <img id="floor_normal-texture" src="textures/floor_normal.jpg">
+        <!-- - floor
+
+        <!-- hall
+        <a-asset-item id="hall-obj" src="models/hall.obj"></a-asset-item>
+        <img id="hall-texture" src="textures/hall.jpg">
+        <!--<img id="hall_normal-texture" src="textures/hall_normal.jpg">-->
+        <!-- - hall
+
+        <!-- hall low floor
+        <!-- this piece is only meant for teleportation
+        <a-asset-item id="hall_low_floor-obj" src="models/hall_low_floor.obj"></a-asset-item>
+        <!-- - hall low floor
+
+        <script id="link" type="text/html">
+          <a-entity class="link"
+            geometry="primitive: plane; height: 1; width: 1"
+            material="shader: flat; src: ${thumb}"
+            sound="on: click; src: #click-sound"></a-entity>
+        </script>
+
+        <a-asset-item id="catheter" src="models/SuctionCatheter_straight.obj"></a-asset-item>
+        <!-- Trauma Room
+        <a-asset-item id="TraumaRoom-obj" src="models/TraumaRoom.obj"></a-asset-item>
+        <a-asset-item id="TraumaRoom-mtl" src="models/TraumaRoom.mtl"></a-asset-item>
+        <!-- - Trauma Room
+        <a-asset-item id="wolf-gtlf" src="models/wolf.gltf"></a-asset-item>
+
+      </a-assets>
+
+
+      <a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>
+
+      <a-gltf-model src="#wolf"></a-gltf-model>
+
+
+      <a-obj-model src="#TraumaRoom-obj" mtl="#TraumaRoom-mtl"
+                scale="0.01 0.01 0.01"></a-entity>
+      <!--<a-entity obj-model="obj: #floor-obj;" material="src: #floor-texture; normalMap: #floor_normal-texture; metalness: 0.6" id="floor"></a-entity>
+      <a-entity obj-model="obj: #hall-obj;" material="src: #hall-texture" id="hall"></a-entity>
+      <a-entity obj-model="obj: #hall_low_floor-obj;" material="opacity: 0.0" id="hall_low_floor"></a-entity>
+      <a-entity obj-model="obj: #acropolis-obj;" material="src: #acropolis-texture"></a-entity>
+      <a-entity obj-model="obj: #castle_lake-obj;" material="src: #castle_lake-texture"></a-entity>
+      <a-entity obj-model="obj: #good_samaritan-obj;" material="src: #good_samaritan-texture"></a-entity>
+      <a-entity obj-model="obj: #moonlight-obj;" material="src: #moonlight-texture"></a-entity>
+      <a-entity obj-model="obj: #podiums-obj;" material="src: #podiums-texture"></a-entity>
+      <a-entity obj-model="obj: #lamps-obj;" material="src: #lamps-texture; side: double;"></a-entity>
+      <a-entity obj-model="obj: #catheter"></a-entity>
+
+      <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="left"></a-entity>
+      <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="right"></a-entity>
+
+    </a-scene>
+
+    <script src="main.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-92113119-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
   </body>
-</html>
+
+</html>-->
