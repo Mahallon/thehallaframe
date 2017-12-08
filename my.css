@@ -7,7 +7,7 @@ body{
   /*background: linear-gradient(to right, #050A0E , #0D111C); /* Standard syntax (must be last) */
 }
 
-#header{
+#splash_wraper{
   position: absolute;
   width: 100%;
   left: 0;
@@ -18,7 +18,7 @@ body{
   background-color: #050A0E;
   background-repeat: no-repeat;
   background-image: url("img/Headset_backdround.png");
-  background-position: center;
+  background-position: top center;
   background-size: cover;
 }
 
@@ -31,25 +31,32 @@ body{
   padding: 15px 32px;
   display: inline-block;
   font-size: 16px;
+  position: absolute;
+  top: 70%;
+  left: 10%;
 }
 
 #startButton{
-  position: relative;
+
   bottom: 0px;
   left: 0px;
 }
 
-#header_wrapper{
-  height: 600px;
+div {
+
 }
 
 .inner {
+  position: relative;
   color: white;
   width: 90%;
+  height: 100%;
   margin: auto;
 }
 
 .nav {
+  position: fixed;
+  bottom: 0;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -71,10 +78,24 @@ body{
   background-color: #0C1018;
 }
 
-#splash_wraper{
-  /*display: none;*/
-}
-
 #main {
   position: relative;
+}
+
+#desktop_instructions{
+  background-color: black;
+  color: white;
+}
+
+.fadeImage {
+            animation: fadein 4s;
+    display: block;
+    margin: 25px auto;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    25%   { opacity: 1; }
+    75%   {opacity: 1;}
+    100% {opacity: 0;}
 }
