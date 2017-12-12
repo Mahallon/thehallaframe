@@ -55,6 +55,12 @@
     <a-scene id="traumaRoom-ascene" style="display:none">
 
 
+      <a-camera>
+         <a-entity id="opacity_move" scale="3 3 3" position="0.0 0 -2" text="opacity:0.0;color:black;align:center;value:Use the Arrow Keys to Move;width:1.5">
+         </a-entity>
+         <a-entity id="opacity_look" scale="3 3 3" position="0.0 0 -2" text="opacity:1.0;color:black;align:center;value:Click and Drag to look arround;width:1.5">
+         </a-entity>
+      </a-camera>
       <a-entity mobile></a-entity>
 
       <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="2 20 0"></a-entity>
@@ -120,10 +126,7 @@
       <a-obj-model src="#TraumaRoom-obj" mtl="#TraumaRoom-mtl"
                 scale="0.01 0.01 0.01"></a-entity>
 
-      <a-entity id="opacity_move" scale="100 100 100" position="0.0 170 -150" text="opacity:0.0;color:black;align:center;value:Use the Arrow Keys to Move;width:1.5">
-      </a-entity>
-      <a-entity id="opacity_look" scale="100 100 100" position="0.0 177 -150" text="opacity:1.0;color:black;align:center;value:Click and Drag to look arround;width:1.5">
-      </a-entity>
+
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="left"></a-entity>
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="right"></a-entity>
 

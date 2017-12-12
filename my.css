@@ -64,12 +64,12 @@ div {
 }
 
 .nav li {
-  float: left;
+  float: right;
 }
 
 .nav li a {
   display: block;
-  color: #0C1018;
+  color: #011110;
   text-align: center;
   padding: 14px 16px;
 }
