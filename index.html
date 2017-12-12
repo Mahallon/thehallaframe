@@ -24,15 +24,6 @@
     <script src="js/mobile_component.js"></script>
     <script type="text/javascript">
     function init() {
-      if(!AFRAME.utils.checkHeadsetConected()){
-        document.getElementById("desktop_instructions").style.visibility = "visible";
-      }
-      else{
-        document.getElementById("headset_instrucitons").style.visibility = "visible";
-      }
-      if(AFRAME.utils.isMobile()){
-        document.getElementById("mobile_instructions").style.visibility = "visible";
-      }
     }
     window.onload = init;
     </script>
@@ -46,7 +37,7 @@
               <button id="enterTheMatrix" onclick="start()">Start</button>
             </div>
             <div class="instructions">
-              <div id="desktop_instructions"  style="visibility:visible"><strong>Desktop</strong>: Keyboard (WASD/arrows) and mouse.</div>
+              <div id="desktop_instructions"  style="display:none"><strong>Desktop</strong>: Keyboard (WASD/arrows) and mouse.</div>
               <div id="headset_instrucitons" style="display:none"><strong>VR headset</strong>: Hand controllers and teleport with trigger.</div>
               <div id="mobile_instructions" style="display:none"><strong>Mobile</strong>: Gaze cursor and teleportation.</div>
             </div>
@@ -55,10 +46,7 @@
 
       <div id="footer">
         <ul class="nav">
-          <li><a href="splash.html">Home</a></li>
-          <li><a href="splash.html">Contact</a></li>
-          <li><a href="https://experiments.withgoogle.com/webvr">WebVR</a></li>
-          <li style="float:right"><a href="splash.html">About</a></li>
+          <li style="float:right"><a href="https://experiments.withgoogle.com/webvr">WebVR</a></li>
         </ul>
       </div>
     </div>
@@ -132,10 +120,66 @@
       <a-obj-model src="#TraumaRoom-obj" mtl="#TraumaRoom-mtl"
                 scale="0.01 0.01 0.01"></a-entity>
 
+      <a-entity id="opacity_move" scale="100 100 100" position="0.0 170 -150" text="opacity:0.0;color:black;align:center;value:Use the Arrow Keys to Move;width:1.5">
+      </a-entity>
+      <a-entity id="opacity_look" scale="100 100 100" position="0.0 177 -150" text="opacity:1.0;color:black;align:center;value:Click and Drag to look arround;width:1.5">
+      </a-entity>
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="left"></a-entity>
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="right"></a-entity>
 
     </a-scene>
+
+<script>
+  var flag = 0;
+  var done = false;
+  var element = window;
+  element.addEventListener("mousedown", function(){
+      flag = 0;
+  }, false);
+  element.addEventListener("mousemove", function(){
+      flag = 1;
+  }, false);
+  element.addEventListener("mouseup", function(){
+      if(flag === 0){
+          console.log("click");
+      }
+      else if(flag === 1){
+        console.log("drag");
+        if(!done){
+          done = true;
+          document.getElementById("opacity_look").setAttribute('text','opacity', 0);
+          document.getElementById("opacity_move").setAttribute('text','opacity', 1);
+        }
+      }
+  }, false);
+
+
+    window.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return; // Do nothing if the event was already processed
+  }
+
+  switch (event.key) {
+    case "ArrowDown":
+      document.getElementById("opacity_move").setAttribute('text','opacity', 0);
+      break;
+    case "ArrowUp":
+      document.getElementById("opacity_move").setAttribute('text','opacity', 0);
+      break;
+    case "ArrowLeft":
+      document.getElementById("opacity_move").setAttribute('text','opacity', 0);
+      break;
+    case "ArrowRight":
+      document.getElementById("opacity_move").setAttribute('text','opacity', 0);
+      break;
+    default:
+      return; // Quit when this doesn't handle the key event.
+  }
+
+  // Cancel the default action to avoid it being handled twice
+  event.preventDefault();
+}, true);
+</script>
 
   </body>
 </html>
@@ -144,7 +188,18 @@ function start() {
     document.getElementById("splash_wraper").style.display = "none";
     document.getElementById("traumaRoom-ascene").style.display = "block";
     document.getElementById("desktop_instructions").className = "fadeImage"
-    AFRAME.utils.checkHeadsetConected();
-    AFRAME.utils.isMobile();
+}
+
+function anaimateText(){
+  var opacity = document.getElementById('opacity');
+      var obj = {opacity: 0};
+      var tween = new AFRAME.TWEEN.Tween(obj)
+        .to({opacity: 1}, 500)
+        .repeat( Infinity )
+        .yoyo( true )
+        .onUpdate(function () {
+          opacity.setAttribute('text', 'opacity', obj.opacity);
+        })
+        .start();
 }
 </script>
