@@ -44,11 +44,21 @@
           </div>
 
 
-      <div id="footer">
-        <ul class="nav">
-          <li style="float:right"><a href="https://experiments.withgoogle.com/webvr">WebVR</a></li>
-        </ul>
-      </div>
+        <div class="footer">
+    			<div class="gradient left"></div>
+    			<div class="gradient right"></div>
+    			<div class="terms">
+    				<a href="https://www.google.com/intl/en/policies/privacy/" target="_blank">Privacy</a> &amp;&nbsp;<a href="https://www.google.com/intl/en/policies/terms/" target="_blank">Terms</a>
+    			</div>
+    			<ul class="credits">
+    				<li><a href="https://webvrexperiments.com/" target="_blank">WebVR</a></li>
+    				<li><a href="http://www.immersus.co/" target="_blank">BioFlightVR</a></li>
+    			</ul>
+                <div class="headphones">
+    			    <img src="img/Headphones_icon_white.png">
+    			<div id="headphones-text">Headphones Recommended</div>
+    		</div>
+    		</div>
     </div>
 
 
@@ -56,9 +66,9 @@
 
 
       <a-camera>
-         <a-entity id="opacity_move" scale="3 3 3" position="0.0 0 -2" text="opacity:0.0;color:black;align:center;value:Use the Arrow Keys to Move;width:1.5">
+         <a-entity id="opacity_move" scale="1 1 1" position="0.0 0 -1" text="opacity:0.0;color:black;align:center;value:Use the Arrow Keys to Move;width:1.5">
          </a-entity>
-         <a-entity id="opacity_look" scale="3 3 3" position="0.0 0 -2" text="opacity:1.0;color:black;align:center;value:Click and Drag to look arround;width:1.5">
+         <a-entity id="opacity_look" scale="1 1 1" position="0.0 0 -1" text="opacity:1.0;color:black;align:center;value:Click and Drag to look arround;width:1.5">
          </a-entity>
       </a-camera>
       <a-entity mobile></a-entity>
@@ -73,15 +83,17 @@
 
         <img id="sky_sphere-texture" src="textures/black_sky_sphere.jpg">
 
-        <a-sound src="audio/84529__cmusounddesign__02-museum.ogg"
+        <a-sound id="sound1" src="audio/84529__cmusounddesign__02-museum.ogg"
                  autoplay="false"
                  loop="true"
-                 position="1 1 0"></a-sound>
+                 position="1 1 0"
+                 on="start"></a-sound>
 
-        <a-sound src="audio/219462__cediez__musee-victoria-londres-grand-escalier.ogg"
+        <a-sound id="sound2"src="audio/219462__cediez__musee-victoria-londres-grand-escalier.ogg"
                  autoplay="false"
                  loop="true"
-                 position="1 1 10"></a-sound>
+                 position="1 1 10"
+                 on="start"></a-sound>
 
 
         <!-- floor -->
@@ -124,13 +136,17 @@
 
 
       <a-obj-model src="#TraumaRoom-obj" mtl="#TraumaRoom-mtl"
-                scale="0.01 0.01 0.01"></a-entity>
+                scale="0.01 0.01 0.01"></a-obj-model>
+
+      <a-obj-model src="models/Earth.obj" mtl="models/Earth.mtl"><a-obj-model>
 
 
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="left"></a-entity>
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="right"></a-entity>
 
     </a-scene>
+
+    <div id="exitButton" onClick="window.location.reload()" ><a href="index.html"></a></div>
 
 <script>
   var flag = 0;
@@ -191,6 +207,9 @@ function start() {
     document.getElementById("splash_wraper").style.display = "none";
     document.getElementById("traumaRoom-ascene").style.display = "block";
     document.getElementById("desktop_instructions").className = "fadeImage"
+    document.getElementById("sound1").components.sound.playSound();
+    document.getElementById("sound2").components.sound.playSound();
+    document.getElementById("exitButton").className = "visible";
 }
 
 function anaimateText(){

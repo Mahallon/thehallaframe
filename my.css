@@ -99,3 +99,201 @@ div {
     75%   {opacity: 1;}
     100% {opacity: 0;}
 }
+
+.footer {
+  color: #133754;
+  z-index: 11; }
+
+.footer .gradient {
+  z-index: 11;
+  position: fixed;
+  bottom: 0;
+  pointer-events: none;
+  background-image: url("../img/splash/gradient.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom; }
+
+.footer .left {
+  left: 0;
+  width: 200vw;
+  height: 40vh; }
+
+.footer .right {
+  right: 0;
+  width: 200vw;
+  height: 40vh;
+  transform: scaleX(-1); }
+
+.footer .about-btn {
+  z-index: 11;
+  right: 0;
+  top: 0;
+  color: #133754;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #133754;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  position: absolute;
+  display: block;
+  margin: 20px;
+  font-family: "NowAlt-Regular";
+  font-size: 15px;
+  text-decoration: none; }
+  @media screen and (max-width: 620px) {
+    .footer .about-btn {
+      font-size: 15px; } }
+  @media screen and (max-height: 620px) {
+    .footer .about-btn {
+      font-size: 15px; } }
+
+.footer .headphones {
+  z-index: 11;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  color: white;
+  overflow: hidden;
+  transition: width 0.2s; }
+  .footer .headphones:hover {
+    width: 240px; }
+  .footer .headphones img {
+    width: auto;
+    display: inline-block;
+    top: 2px;
+    left: 3px;
+    height: 20px;
+    position: absolute; }
+  .footer .headphones #headphones-text {
+    width: 230px;
+    height: 100%;
+    display: inline-block;
+    height: 100%;
+    position: absolute;
+    line-height: 30px;
+    left: 30px;
+    font-family: "NowAlt-Medium";
+    font-size: 9.5px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase; }
+
+.footer .terms {
+  z-index: 12;
+  position: absolute;
+  display: block;
+  text-align: right;
+  right: 0;
+  bottom: 0;
+  margin: 0 20px 20px 0;
+  color: #133754;
+  font-size: 15px;
+  white-space: nowrap; }
+
+.footer .terms a {
+  font-family: "NowAlt-Regular";
+  color: #133754;
+  text-decoration: none; }
+
+.footer .terms a:hover {
+  text-decoration: underline; }
+
+@media screen and (max-width: 620px) {
+  .footer .terms {
+    margin: 0 0 20px 0;
+    text-align: left;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%); }
+  .footer .credits {
+    text-align: justify !important; }
+  .footer .credits:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    margin: 0 20px 30px 20px; }
+  .footer .credits li {
+    display: inline-block;
+    margin: 0 0 0 0 !important; } }
+
+.footer .credits {
+
+  z-index: 11;
+  position: absolute;
+  width: calc(100% - 40px);
+  min-width: 300px;
+  left: 0;
+  bottom: 0;
+  padding: 0;
+  text-align: left;
+  margin: 0 20px 17px 20px; }
+
+.footer .credits a {
+  color: #133754;
+}
+
+.footer .credits li {
+  display: inline-block;
+  margin: 0 10px 0 10px; }
+
+.footer .credits li:nth-of-type(1) img {
+  width: 104px;
+  height: auto; }
+  @media screen and (max-width: 460px) {
+    .footer .credits li:nth-of-type(1) img {
+      width: 78px; } }
+
+.footer .credits li:nth-of-type(2) img {
+  width: 1px;
+  height: auto; }
+  @media screen and (max-width: 460px) {
+    .footer .credits li:nth-of-type(2) img {
+      height: 40px; } }
+
+.footer .credits li:nth-of-type(3) img {
+  width: 77px;
+  height: auto; }
+  @media screen and (max-width: 460px) {
+    .footer .credits li:nth-of-type(3) img {
+      width: 58px; } }
+
+.footer .credits li:nth-of-type(4) img {
+  width: 1px;
+  height: auto; }
+  @media screen and (max-width: 460px) {
+    .footer .credits li:nth-of-type(4) img {
+      height: 40px; } }
+
+.footer .credits li:nth-of-type(5) img {
+  width: 137px;
+  height: auto; }
+  @media screen and (max-width: 460px) {
+    .footer .credits li:nth-of-type(5) img {
+      width: 103px; } }
+
+.footer .credits li:nth-of-type(1) {
+  margin-left: 0; }
+
+.footer .credits li:nth-of-type(5) {
+  margin-right: 0; }
+
+#exitButton {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    color: white;
+    display: none;
+    cursor: pointer;
+    background-image: url(img/backArrow.png);
+    background-size: 100% 100%;
+    z-index: 10000000000; }
+
+#exitButton.visible {
+      display: block; }
